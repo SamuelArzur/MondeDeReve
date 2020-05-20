@@ -1,0 +1,8 @@
+  Scenario Outline: refus age négatif
+    Given la création d'une ville (Konoha) ainsi qu'un habitant avec <nom 1> et <age 1>
+    When l'habitant est ajouté
+    Then le système refuse avec le <messageErreur>.
+
+    Examples:
+      |nom 1   |age 1|messageErreur                                         |
+      |"Naruto"|-10  |On ne peut pas ajouter un habitant avec un age négatif|

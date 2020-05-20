@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Habitant
+comment0.text=\n\ D\u00E9crivez\ votre\ classe\ Habitant\ ici.\n\n\ @author\ (votre\ nom)\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\n
+comment1.params=
+comment1.target=Habitant()
+comment1.text=\n\ Constructeur\ d'objets\ de\ classe\ Habitant\n
+comment2.params=nom
+comment2.target=void\ setNom(java.lang.String)
+comment3.params=titre
+comment3.target=void\ setTitre(java.lang.String)
+comment4.params=age
+comment4.target=void\ setAge(int)
+comment5.params=
+comment5.target=java.lang.String\ getNom()
+comment6.params=
+comment6.target=java.lang.String\ getTitre()
+comment7.params=
+comment7.target=int\ getAge()
+comment8.params=
+comment8.target=void\ evoluer()
+numComments=9

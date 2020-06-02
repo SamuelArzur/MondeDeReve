@@ -10,7 +10,7 @@ Feature: US_004 Prison
 
     Examples:
     |ville 1 |nb habitant 1|habitant 1|nb jours|nb points|
-    |"Konoha"|10           |"Sasuke"  |56      |3        |
+    |"Konoha"|10           |Sasuke  |56      |3        |
 
 
 

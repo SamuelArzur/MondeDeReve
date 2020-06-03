@@ -37,5 +37,7 @@
     <orderEntry type="library" scope="TEST" name="io.cucumber:cucumber-java:2.4.0" level="project" />
     <orderEntry type="library" name="io.cucumber:cucumber-java:2.4.0" level="project" />
     <orderEntry type="library" name="io.cucumber:cucumber-junit:2.4.0" level="project" />
+    <orderEntry type="library" name="io.cucumber:cucumber-java:2.4.01" level="project" />
+    <orderEntry type="module" module-name="main" />
   </component>
 </module>

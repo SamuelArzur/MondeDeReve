@@ -1,20 +1,18 @@
-package test;
+package src.main;
+
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import src.main.Chassis;
-import src.main.Roue;
-import src.main.Voiture;
+import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertEquals;
-
 public class VoitureCucumberTest {
-    private Voiture voiture = new Voiture("Mercedes", "rouge");
+    private final Voiture voiture = new Voiture("Mercedes", "rouge");
     private Chassis chassis;
-    private ArrayList<Roue> roueList = new ArrayList<>();
+    private final ArrayList<Roue> roueList = new ArrayList<>();
+    private Engin v;
 
     @Given("le client crée (\\d+) roues de poids (\\d+), un chassis de poids (\\d+)")
     public void leClientCreeUnNouveauChassisSansSpecifierSonPoids(int nbRoues, int poidsRoue, int poidsChassis) {
@@ -33,5 +31,21 @@ public class VoitureCucumberTest {
     @Then("Le poids de la voiture vaut (\\d+)")
     public void verificationDuPoidsDeLaVoiture(int poidsVoiture) {
         assertEquals(poidsVoiture, voiture.getPoids());
+    }
+
+    @Given("un habitant normal")
+    public void unHabitantNormal() {
+        //create habitant
+    }
+
+    @When("il veut créer une voiture à l'aide de la factory")
+    public void ilVeutCreerUneVoitureALAideDeLaFactory() {
+        EnginFactory vf = new EnginFactory();
+        v = vf.createVoiture("");
+    }
+
+    @Then("la voiture créée est de la classe attendue")
+    public void laVoitureCreeeEstDeLaClasseAttendue() {
+        assertEquals(Voiture.class, v.getClass());
     }
 }

@@ -1,6 +1,5 @@
 package test;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import src.main.Chassis;
@@ -19,7 +18,7 @@ public class VoitureTest {
     private Roue roue2;
 
     /**
-     * Default constructor for test class src.test.VoitureTest
+     * Default constructor for test class src.VoitureTest
      */
     public VoitureTest() {
     }
@@ -36,15 +35,6 @@ public class VoitureTest {
         roue2 = new Roue(10, 10);
         roueList.add(roue1);
         voiture1 = new Voiture("Rolls Royce", "noire", chassis1, roueList);
-    }
-
-    /**
-     * Tears down the test fixture.
-     * <p>
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown() {
     }
 
     // Tests getters
@@ -135,14 +125,14 @@ public class VoitureTest {
     public void testRemoveRoueBiDir() {
         voiture1.removeRoue(roue1);
         assertFalse(voiture1.getRoues().contains(roue1));
-        assertNull(roue1.getVehiculeDestructeur());
+        assertNull(roue1.getEngin());
     }
 
     @Test
     public void testAddRoueBiDir() {
         voiture1.addRoue(roue2);
         assertTrue(voiture1.getRoues().contains(roue2));
-        assertEquals(voiture1, roue2.getVehiculeDestructeur());
+        assertEquals(voiture1, roue2.getEngin());
     }
 
     // Tests autres méthodes

@@ -1,7 +1,7 @@
 package src.main;
 
 public class Chassis {
-    private int poids = 0;
+    private int poids;
 
     public Chassis() {
         this.poids = 0;

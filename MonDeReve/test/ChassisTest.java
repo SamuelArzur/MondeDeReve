@@ -1,17 +1,15 @@
 package test;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import src.main.Chassis;
-
 import static org.junit.Assert.assertEquals;
 
 public class ChassisTest {
     private Chassis chassis1;
 
     /**
-     * Default constructor for test class src.test.VoitureTest
+     * Default constructor for test class src.VoitureTest
      */
     public ChassisTest() {
     }
@@ -24,15 +22,6 @@ public class ChassisTest {
     @Before
     public void setUp() {
         chassis1 = new Chassis(1000);
-    }
-
-    /**
-     * Tears down the test fixture.
-     * <p>
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown() {
     }
 
     // Tests getters
